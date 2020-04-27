@@ -46,6 +46,12 @@ public class ScanPage extends AppCompatActivity {
                 }
             }
         });
+        wifiList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(ScanPage.this, String.format("Connecting to Number: %s", position),Toast.LENGTH_SHORT).show();
+            }
+        });
     }
     @Override
     protected void onPostResume() {
